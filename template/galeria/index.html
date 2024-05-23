@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -10,8 +11,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,700;1,400&display=swap"
     rel="stylesheet">
 
-  <link rel="stylesheet" href="/template/css/style.css">
-  <link rel="shortcut icon" href="img/y-y-hakusho-seeklogo.com.svg" type="image/x-icon">
+  <link rel="stylesheet" href="{% static '/css/style.css' %}">
+  <link rel="shortcut icon" href="{% static 'img/y-y-hakusho-seeklogo.com.svg' %}" type="image/x-icon">
 
   <title>Yu Yu Hakusho</title>
 </head>
@@ -22,13 +23,13 @@
     <header class="header">
       <div class="alinhamentoLogo">
         <a href="#" id="logo">
-          <img src="img/y-y-hakusho-seeklogo.com.svg" alt="Logo Yu Yu Hakusho"></a>
+          <img src="{% static 'img/y-y-hakusho-seeklogo.com.svg' %}" alt="Logo Yu Yu Hakusho"></a>
         <p>Yu Yu Hakusho</p>
       </div>
       <nav>
         <ul>
           <li><a href="#">Sobre</a></li>
-          <li><a href="herois.html">Personagens</a></li>
+          <li><a href="{% url 'personagem' %}">Personagens</a></li>
           <li><a href="#">Contato</a></li>
         </ul>
       </nav>
@@ -38,22 +39,22 @@
 
       <nav class="sidenav">
         <ul>
-          <li><a href="personagem.html"><img src="img/yusuke.jpg" width="400" height="400" alt="Yusuke Urameshi"
+          <li><a href="{% url 'personagem' %}"><img src="{% static 'img/yusuke.jpg' %}" width="400" height="400" alt="Yusuke Urameshi"
                 class="iconesPersonagens"></a></li>
 
-          <li><a href="#"><img src="img/kuwabara.jpg" width="400" height="400" alt="Kazuma Kuwabara"
+          <li><a href="#"><img src="{% static 'img/kuwabara.jpg' %}" width="400" height="400" alt="Kazuma Kuwabara"
                 class="iconesPersonagens"></a></li>
 
-          <li><a href="#"><img src="img/kurama.jpg" width="400" height="400" alt="Kurama Youko"
+          <li><a href="#"><img src="{% static 'img/kurama.jpg' %}" width="400" height="400" alt="Kurama Youko"
                 class="iconesPersonagens"></a></li>
 
-          <li><a href="#"><img src="img/hiei.jpg" width="400" height="400" alt="Hiei" class="iconesPersonagens"></a>
+          <li><a href="#"><img src="{% static 'img/hiei.jpg' %}" width="400" height="400" alt="Hiei" class="iconesPersonagens"></a>
           </li>
 
-          <li><a href="#"><img src="img/botan.jpg" width="400" height="400" alt="Botan" class="iconesPersonagens"></a>
+          <li><a href="#"><img src="{% static 'img/botan.jpg' %}" width="400" height="400" alt="Botan" class="iconesPersonagens"></a>
           </li>
 
-          <li><a href="#"><img src="img/keiko.jpg" width="400" height="400" alt="Keiko Yukimura"
+          <li><a href="#"><img src="{% static 'img/keiko.jpg' %}" width="400" height="400" alt="Keiko Yukimura"
                 class="iconesPersonagens"></a></li>
         </ul>
       </nav>
@@ -84,7 +85,7 @@
           Shonen Jump, da editora Shueisha, de 1990 a 1994. Além do mangá, "Yu Yu Hakusho" também foi adaptado para um
           anime de grande sucesso.</p>
 
-        <img src="img/yu-yu-hakusho-pictures1.jpg" alt="Elenco Yu Yu Hakusho" class="img1">
+        <img src="{% static 'img/yu-yu-hakusho-pictures1.jpg' %}" alt="Elenco Yu Yu Hakusho" class="img1">
 
         <p class="destaque">A história segue Yusuke Urameshi, um adolescente delinquente que acidentalmente morre ao
           salvar a vida de uma
@@ -92,7 +93,7 @@
           e
           dos mortos.</p>
 
-        <img src="img/yu-yu-hakusho-pictures2.jpg" alt="Elenco Yu Yu Hakusho 2" class="img2">
+        <img src="{% static 'img/yu-yu-hakusho-pictures2.jpg' %}" alt="Elenco Yu Yu Hakusho 2" class="img2">
 
         <p>Para voltar à vida, Yusuke é incumbido de realizar várias tarefas sobrenaturais, provando que ele merece uma
           segunda chance.</p>
@@ -125,19 +126,19 @@
             shonen manga.</p>
         </div>
 
-        <img src="img/yu-yu-hakusho-pictures3.jpg" alt="Equipe Yu Yu Hakusho" class="colunaExpansiva">
+        <img src="{% static 'img/yu-yu-hakusho-pictures3.jpg' %}" alt="Equipe Yu Yu Hakusho" class="colunaExpansiva">
 
       </main>
       <aside class="anuncio">
         <div class="anuncioItem">
-          <a href="herois.html">
-          <img src="img/Herois.png" alt="">
+          <a href="{% url 'herois' %}">
+          <img src="{% static 'img/Herois.png' %}" alt="">
         </a>
         </div>
 
         <div class="anuncioItem anuncio2">
           <a href="viloes.html">
-          <img src="img/Viloes.png" alt="">
+          <img src="{% static 'img/Viloes.png' %}" alt="">
         </a>
         </div>
       </aside>
