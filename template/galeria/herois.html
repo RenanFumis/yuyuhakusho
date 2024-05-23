@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -10,8 +11,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,700;1,400&display=swap"
     rel="stylesheet">
 
-  <link rel="stylesheet" href="/template/css/herois.css">
-  <link rel="shortcut icon" href="img/y-y-hakusho-seeklogo.com.svg" type="image/x-icon">
+  <link rel="stylesheet" href="{% static 'css/herois.css' %}">
+  <link rel="shortcut icon" href="{% static 'img/y-y-hakusho-seeklogo.com.svg' %}" type="image/x-icon">
 
   <title>Yu Yu Hakusho</title>
 </head>
@@ -21,14 +22,14 @@
   <div>
     <header class="header">
       <div class="alinhamentoLogo">
-        <a href="index.html" id="logo">
-          <img src="img/y-y-hakusho-seeklogo.com.svg" alt="Logo Yu Yu Hakusho"></a>
+        <a href="{% url 'index' %}" id="logo">
+          <img src="{% static 'img/y-y-hakusho-seeklogo.com.svg' %}" alt="Logo Yu Yu Hakusho"></a>
         <p>Yu Yu Hakusho</p>
       </div>
       <nav>
         <ul>
           <li><a href="#">Sobre</a></li>
-          <li><a href="personagem.html">Personagens</a></li>
+          <li><a href="{% url 'personagem' %}">Personagens</a></li>
           <li><a href="#">Contato</a></li>
         </ul>
       </nav>
@@ -38,22 +39,22 @@
 
       <nav class="sidenav">
         <ul>
-          <li><a href="#"><img src="img/yusuke.jpg" width="400" height="400" alt="Yusuke Urameshi"
+          <li><a href="#"><img src="{% static 'img/yusuke.jpg' %}" width="400" height="400" alt="Yusuke Urameshi"
                 class="iconesPersonagens"></a></li>
 
-          <li><a href="#"><img src="img/kuwabara.jpg" width="400" height="400" alt="Kazuma Kuwabara"
+          <li><a href="#"><img src="{% static 'img/kuwabara.jpg' %}" width="400" height="400" alt="Kazuma Kuwabara"
                 class="iconesPersonagens"></a></li>
 
-          <li><a href="#"><img src="img/kurama.jpg" width="400" height="400" alt="Kurama Youko"
+          <li><a href="#"><img src="{% static 'img/kurama.jpg' %}" width="400" height="400" alt="Kurama Youko"
                 class="iconesPersonagens"></a></li>
 
-          <li><a href="#"><img src="img/hiei.jpg" width="400" height="400" alt="Hiei" class="iconesPersonagens"></a>
+          <li><a href="#"><img src="{% static 'img/hiei.jpg' %}" width="400" height="400" alt="Hiei" class="iconesPersonagens"></a>
           </li>
 
-          <li><a href="#"><img src="img/botan.jpg" width="400" height="400" alt="Botan" class="iconesPersonagens"></a>
+          <li><a href="#"><img src="{% static 'img/botan.jpg' %}" width="400" height="400" alt="Botan" class="iconesPersonagens"></a>
           </li>
 
-          <li><a href="#"><img src="img/keiko.jpg" width="400" height="400" alt="Keiko Yukimura"
+          <li><a href="#"><img src="{% static 'img/keiko.jpg' %}" width="400" height="400" alt="Keiko Yukimura"
                 class="iconesPersonagens"></a></li>
         </ul>
       </nav>
@@ -67,66 +68,66 @@
         <p class="colunaExpansiva">O anime "Yu Yu Hakusho" tem vários personagens cativantes, como nossos heróis que embarcam em aventuras emocionantes e enfrentam inúmeros desafios sobrenaturais:</p>
 
         <div>
-          <img src="img/herois/yusuke_uramesh.png" alt="Yusuke Urameshi" class="img2">
+          <img src="{% static 'img/herois/yusuke_uramesh.png' %}" alt="Yusuke Urameshi" class="img2">
           <span>Yusuke Urameshi - O Delinquente</span>
 
         </div>
           <div>
-            <img src="img/herois/keiko_yukimura.png" alt="Keiko Yukimura" class="img2">
+            <img src="{% static 'img/herois/keiko_yukimura.png' %}" alt="Keiko Yukimura" class="img2">
             <span>Keiko Yukimura - A Namorada</span>
           </div>
           <div>
-            <img src="img/herois/botan.png" alt="Botan" class="img2">
+            <img src="{% static 'img/herois/botan.png' %}" alt="Botan" class="img2">
             <span>Botan - A Guia Espiritual</span>
 
           </div>
           <div>
-          <img src="img/herois/koenma.png" alt="Koenma" class="img2">
+          <img src="{% static 'img/herois/koenma.png' %}" alt="Koenma" class="img2">
           <span>Koenma - O Filho do Chefe</span>
             
           </div>
           <div>
-          <img src="img/herois/kazuma_kuwabara.png" alt="Kazuma Kuwabara" class="img2">
+          <img src="{% static 'img/herois/kazuma_kuwabara.png' %}" alt="Kazuma Kuwabara" class="img2">
           <span>Kazuma Kuwabara - O Rival Leal</span>
             
           </div>
           <div>
-          <img src="img/herois/kurama.png" alt="Kurama" class="img2">
+          <img src="{% static 'img/herois/kurama.png' %}" alt="Kurama" class="img2">
           <span>Kurama - O Lendário Ladrão</span>
             
           </div>
           <div>
-          <img src="img/herois/hiei.png" alt="Hiei" class="img2">
+          <img src="{% static 'img/herois/hiei.png' %}" alt="Hiei" class="img2">
           <span>Hiei - O Lobo Solitário</span>
             
           </div>
           <div>
-          <img src="img/herois/genkai.png" alt="Genkai" class="img2">
+          <img src="{% static 'img/herois/genkai.png' %}" alt="Genkai" class="img2">
           <span>Genkai - A Mestra</span>
             
           </div>
           <div>
-          <img src="img/herois/jorge_saotome.png" alt="Jorge Saotome" class="img2">
+          <img src="{% static 'img/herois/jorge_saotome.png' %}" alt="Jorge Saotome" class="img2">
           <span>Jorge Saotome - O Assistente Devotado</span>
             
           </div>
           <div>
-            <img src="img/herois/yukina.png" alt="Yukina" class="img2">
+            <img src="{% static 'img/herois/yukina.png' %}" alt="Yukina" class="img2">
             <span>Yukina - A Irmã Desaparecida</span>
 
           </div>
           <div>
-          <img src="img/herois/hinageshi.png" alt="Hinageshi" class="img2">
+          <img src="{% static 'img/herois/hinageshi.png' %}" alt="Hinageshi" class="img2">
           <span>Hinageshi - A Mensageira</span>
             
           </div>
           <div>
-          <img src="img/herois/shizuru_kuwabara.png" alt="Shizuru Kuwabara" class="img2">
+          <img src="{% static 'img/herois/shizuru_kuwabara.png' %}" alt="Shizuru Kuwabara" class="img2">
           <span>Shizuru Kuwabara - A Irmã Protetora</span>
             
           </div>
           <div>
-          <img src="img/herois/pu.png" alt="Pu" class="img2">
+          <img src="{% static 'img/herois/pu.png' %}" alt="Pu" class="img2">
           <span>Pu - A Criatura Misteriosa</span>
             
           </div>
@@ -138,14 +139,14 @@
       </main>
       <aside class="anuncio">
         <div class="anuncioItem">
-          <a href="herois.html">
-          <img src="img/Herois.png" alt="">
+          <a href="{% url 'herois' %}">
+          <img src="{% static 'img/Herois.png' %}" alt="">
         </a>
         </div>
 
         <div class="anuncioItem anuncio2">
           <a href="viloes.html">
-          <img src="img/Viloes.png" alt="">
+          <img src="{% static 'img/Viloes.png' %}" alt="">
         </a>
         </div>
       </aside>

@@ -1,7 +1,9 @@
 from django.urls import path
-from galeria.views import index, personagem
+from galeria.views import index, personagem, herois
 
 urlpatterns = [
-    path('', index),
-    path('personagem/', personagem)
+    path('', index, name='index'),
+    path('personagem/', personagem, name='personagem'),
+    path('herois/', herois, name='herois')
+
 ]

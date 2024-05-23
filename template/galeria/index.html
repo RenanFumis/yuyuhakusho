@@ -29,7 +29,7 @@
       <nav>
         <ul>
           <li><a href="#">Sobre</a></li>
-          <li><a href="herois.html">Personagens</a></li>
+          <li><a href="{% url 'personagem' %}">Personagens</a></li>
           <li><a href="#">Contato</a></li>
         </ul>
       </nav>
@@ -39,7 +39,7 @@
 
       <nav class="sidenav">
         <ul>
-          <li><a href="personagem.html"><img src="{% static 'img/yusuke.jpg' %}" width="400" height="400" alt="Yusuke Urameshi"
+          <li><a href="{% url 'personagem' %}"><img src="{% static 'img/yusuke.jpg' %}" width="400" height="400" alt="Yusuke Urameshi"
                 class="iconesPersonagens"></a></li>
 
           <li><a href="#"><img src="{% static 'img/kuwabara.jpg' %}" width="400" height="400" alt="Kazuma Kuwabara"
@@ -131,7 +131,7 @@
       </main>
       <aside class="anuncio">
         <div class="anuncioItem">
-          <a href="herois.html">
+          <a href="{% url 'herois' %}">
           <img src="{% static 'img/Herois.png' %}" alt="">
         </a>
         </div>
