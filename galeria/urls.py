@@ -1,9 +1,10 @@
 from django.urls import path
-from galeria.views import index, personagem, herois
+from galeria.views import index, imagem, herois
 
 urlpatterns = [
     path('', index, name='index'),
-    path('personagem/', personagem, name='personagem'),
-    path('herois/', herois, name='herois')
+    path('herois/', herois, name='herois'),
+
+    path('imagem/', imagem, name='imagem')
 
 ]

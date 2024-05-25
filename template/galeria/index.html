@@ -1,24 +1,6 @@
+{% extends 'galeria/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,700;1,400&display=swap"
-    rel="stylesheet">
-
-  <link rel="stylesheet" href="{% static '/css/style.css' %}">
-  <link rel="shortcut icon" href="{% static 'img/y-y-hakusho-seeklogo.com.svg' %}" type="image/x-icon">
-
-  <title>Yu Yu Hakusho</title>
-</head>
-
-<body>
-
+{% block content %}
   <div>
     <header class="header">
       <div class="alinhamentoLogo">
@@ -29,7 +11,7 @@
       <nav>
         <ul>
           <li><a href="#">Sobre</a></li>
-          <li><a href="{% url 'personagem' %}">Personagens</a></li>
+          <li><a href="{% url 'imagem' %}">Personagens</a></li>
           <li><a href="#">Contato</a></li>
         </ul>
       </nav>
@@ -37,9 +19,10 @@
 
     <div class="container">
 
+
       <nav class="sidenav">
         <ul>
-          <li><a href="{% url 'personagem' %}"><img src="{% static 'img/yusuke.jpg' %}" width="400" height="400" alt="Yusuke Urameshi"
+          <li><a href="{% url 'imagem' %}"><img src="{% static 'img/yusuke.jpg' %}" width="400" height="400" alt="Yusuke Urameshi"
                 class="iconesPersonagens"></a></li>
 
           <li><a href="#"><img src="{% static 'img/kuwabara.jpg' %}" width="400" height="400" alt="Kazuma Kuwabara"
@@ -145,12 +128,4 @@
 
     </div>
 
-    <footer>
-      <p>Desenvolvido por <a href="https://www.linkedin.com/in/renanfumis/">Renan Fumis</a></p>
-    </footer>
-
-  </div>
-
-</body>
-
-</html>
+  {% endblock %}

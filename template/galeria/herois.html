@@ -1,23 +1,6 @@
+{% extends 'galeria/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,700;1,400&display=swap"
-    rel="stylesheet">
-
-  <link rel="stylesheet" href="{% static 'css/herois.css' %}">
-  <link rel="shortcut icon" href="{% static 'img/y-y-hakusho-seeklogo.com.svg' %}" type="image/x-icon">
-
-  <title>Yu Yu Hakusho</title>
-</head>
-
-<body>
+{% block content %}
 
   <div>
     <header class="header">
@@ -29,7 +12,7 @@
       <nav>
         <ul>
           <li><a href="#">Sobre</a></li>
-          <li><a href="{% url 'personagem' %}">Personagens</a></li>
+          <li><a href="{% url 'imagem' %}">Personagens</a></li>
           <li><a href="#">Contato</a></li>
         </ul>
       </nav>
@@ -67,24 +50,20 @@
 
         <p class="colunaExpansiva">O anime "Yu Yu Hakusho" tem vários personagens cativantes, como nossos heróis que embarcam em aventuras emocionantes e enfrentam inúmeros desafios sobrenaturais:</p>
 
+        {% if fotos %}
+        {% for foto in fotos %}
+        
         <div>
-          <img src="{% static 'img/herois/yusuke_uramesh.png' %}" alt="Yusuke Urameshi" class="img2">
-          <span>Yusuke Urameshi - O Delinquente</span>
-
+          <a href="{% url 'imagem'  %}"><img src="{% static 'img/herois/' %}{{ foto.foto }}" alt="Yusuke Urameshi" class="img2"></a>
+          <span>{{ foto.nome}} - {{ foto.codinome }}</span>
         </div>
-          <div>
-            <img src="{% static 'img/herois/keiko_yukimura.png' %}" alt="Keiko Yukimura" class="img2">
-            <span>Keiko Yukimura - A Namorada</span>
-          </div>
-          <div>
-            <img src="{% static 'img/herois/botan.png' %}" alt="Botan" class="img2">
-            <span>Botan - A Guia Espiritual</span>
 
-          </div>
-          <div>
-          <img src="{% static 'img/herois/koenma.png' %}" alt="Koenma" class="img2">
-          <span>Koenma - O Filho do Chefe</span>
-            
+          {% endfor %}
+          {% else %}
+          {% endif %}
+
+          <!--
+          
           </div>
           <div>
           <img src="{% static 'img/herois/kazuma_kuwabara.png' %}" alt="Kazuma Kuwabara" class="img2">
@@ -130,7 +109,7 @@
           <img src="{% static 'img/herois/pu.png' %}" alt="Pu" class="img2">
           <span>Pu - A Criatura Misteriosa</span>
             
-          </div>
+          </div> -->
 
         
 
@@ -153,12 +132,4 @@
 
     </div>
 
-    <footer>
-      <p>Desenvolvido por <a href="https://www.linkedin.com/in/renanfumis/">Renan Fumis</a></p>
-    </footer>
-
-  </div>
-
-</body>
-
-</html>
+  {% endblock %}
