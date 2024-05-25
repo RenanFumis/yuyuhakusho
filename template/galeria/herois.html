@@ -12,7 +12,7 @@
       <nav>
         <ul>
           <li><a href="#">Sobre</a></li>
-          <li><a href="{% url 'personagem' %}">Personagens</a></li>
+          <li><a href="{% url 'imagem' %}">Personagens</a></li>
           <li><a href="#">Contato</a></li>
         </ul>
       </nav>
@@ -50,30 +50,20 @@
 
         <p class="colunaExpansiva">O anime "Yu Yu Hakusho" tem vários personagens cativantes, como nossos heróis que embarcam em aventuras emocionantes e enfrentam inúmeros desafios sobrenaturais:</p>
 
-        {% if personagem %}
-        {% for foto in personagem %}
+        {% if fotos %}
+        {% for foto in fotos %}
         
         <div>
-          <a href="{% url 'personagem' %}"><img src="{% static 'img/herois/' %}{{ foto.foto }}" alt="Yusuke Urameshi" class="img2"></a>
+          <a href="{% url 'imagem'  %}"><img src="{% static 'img/herois/' %}{{ foto.foto }}" alt="Yusuke Urameshi" class="img2"></a>
           <span>{{ foto.nome}} - {{ foto.codinome }}</span>
         </div>
-          <!-- <div>
-            <img src="{% static 'img/herois/keiko_yukimura.png' %}" alt="Keiko Yukimura" class="img2">
-            <span>Keiko Yukimura - A Namorada</span>
-          </div> -->
+
           {% endfor %}
           {% else %}
           {% endif %}
 
-          <!-- <div>
-            <img src="{% static 'img/herois/botan.png' %}" alt="Botan" class="img2">
-            <span>Botan - A Guia Espiritual</span>
-
-          </div>
-          <div>
-          <img src="{% static 'img/herois/koenma.png' %}" alt="Koenma" class="img2">
-          <span>Koenma - O Filho do Chefe</span>
-            
+          <!--
+          
           </div>
           <div>
           <img src="{% static 'img/herois/kazuma_kuwabara.png' %}" alt="Kazuma Kuwabara" class="img2">
