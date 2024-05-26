@@ -54,7 +54,13 @@
         {% for foto in fotos %}
         
         <div>
-          <a href="{% url 'imagem' foto.id %}"><img src="{% static 'img/herois/' %}{{ foto.foto }}" alt="Yusuke Urameshi" class="img2"></a>
+          <a href="{% url 'imagem' foto.id %}">
+            {% if foto.foto == "" or foto.foto == null %}
+            <img src="{% static 'img/herois/not_found.png' %}" alt="Personagem do Anime" class="img2">
+          {% else %}
+            <img src="{{ foto.foto.url }}" alt="Personagem do Anime" class="img2">
+          {% endif %}
+          </a>
           <span>{{ foto.nome}} - {{ foto.codinome }}</span>
         </div>
 
