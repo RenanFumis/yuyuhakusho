@@ -5,6 +5,6 @@ urlpatterns = [
     path('', index, name='index'),
     path('herois/', herois, name='herois'),
 
-    path('imagem/', imagem, name='imagem')
+    path('imagem/<int:foto_id>', imagem, name='imagem')
 
 ]

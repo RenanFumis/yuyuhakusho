@@ -11,8 +11,8 @@
       </div>
       <nav>
         <ul>
-          <li><a href="#">Sobre</a></li>
-          <li><a href="{% url 'imagem' %}">Personagens</a></li>
+          <li><a href="{% url 'index' %}">Inicio</a></li>
+          <li><a href="#">Vilões</a></li>
           <li><a href="#">Contato</a></li>
         </ul>
       </nav>
@@ -20,7 +20,7 @@
 
     <div class="container">
 
-      <nav class="sidenav">
+      <!-- <nav class="sidenav">
         <ul>
           <li><a href="#"><img src="{% static 'img/yusuke.jpg' %}" width="400" height="400" alt="Yusuke Urameshi"
                 class="iconesPersonagens"></a></li>
@@ -40,7 +40,7 @@
           <li><a href="#"><img src="{% static 'img/keiko.jpg' %}" width="400" height="400" alt="Keiko Yukimura"
                 class="iconesPersonagens"></a></li>
         </ul>
-      </nav>
+      </nav> -->
 
       <main class="conteudo">
         <div class="titulo">
@@ -54,7 +54,7 @@
         {% for foto in fotos %}
         
         <div>
-          <a href="{% url 'imagem'  %}"><img src="{% static 'img/herois/' %}{{ foto.foto }}" alt="Yusuke Urameshi" class="img2"></a>
+          <a href="{% url 'imagem' foto.id %}"><img src="{% static 'img/herois/' %}{{ foto.foto }}" alt="Yusuke Urameshi" class="img2"></a>
           <span>{{ foto.nome}} - {{ foto.codinome }}</span>
         </div>
 
@@ -116,7 +116,7 @@
         
 
       </main>
-      <aside class="anuncio">
+      <!-- <aside class="anuncio">
         <div class="anuncioItem">
           <a href="{% url 'herois' %}">
           <img src="{% static 'img/Herois.png' %}" alt="">
@@ -128,7 +128,7 @@
           <img src="{% static 'img/Viloes.png' %}" alt="">
         </a>
         </div>
-      </aside>
+      </aside> -->
 
     </div>
 

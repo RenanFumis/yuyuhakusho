@@ -11,8 +11,8 @@
       </div>
       <nav>
         <ul>
-          <li><a href="#">Sobre</a></li>
-          <li><a href="{% url 'imagem' %}">Personagens</a></li>
+          <li><a href="{% url 'index' %}">Inicio</a></li>
+          <li><a href="{% url 'herois' %}">Personagens</a></li>
           <li><a href="#">Contato</a></li>
         </ul>
       </nav>
@@ -44,35 +44,29 @@
 
       <main class="conteudo">
         <div class="titulo">
-          <h1>Yusuke Urameshi</h1>
+          <h1>{{foto.nome}}</h1>
         </div>
-        <img src="{% static 'img/herois/yusuke_uramesh.png' %}" alt="Elenco Yu Yu Hakusho" class="">
+        <img src="{% static 'img/herois/' %}{{ foto.foto }}" alt="Elenco Yu Yu Hakusho" class="">
 
-        <p class="colunaExpansiva">Yusuke Urameshi é inicialmente apresentado como um delinquente juvenil de 14 anos,
-          conhecido por seu comportamento rebelde, envolvimento em brigas de rua e baixo desempenho escolar. Apesar de
-          sua fachada durona, ele tem um bom coração e um forte senso de justiça.</p>
+        <p class="colunaExpansiva">{{ foto.introducao_1 }}</p>
 
 
-        <p class="colunaExpansiva">O inicio da jornada de Urameshi começa com sua morte inesperada. Ele sacrifica sua
-          vida para salvar uma criança de ser atropelada por um carro. Sua morte pega até o Mundo Espiritual de
-          surpresa, pois ninguém esperava que ele realizasse um ato tão altruísta. Por causa disso, Yusuke recebe uma
-          oportunidade de retornar à vida após completar uma série de tarefas sobrenaturais, provando que ele merece uma
-          segunda chance.</p>
+        <p class="colunaExpansiva"> {{ foto.introducao_2}} </p>
 
         <div>
-          <h3>Detetive Espiritual</h3>
-          <p> Após ser ressuscitado, Yusuke é designado como Detetive Espiritual, um título que lhe concede a responsabilidade de investigar atividades paranormais e enfrentar demônios que ameaçam o Mundo Humano. Ele recebe diversas missões do Mundo Espiritual, orientado por Botan, a guia espiritual, e Koenma, o príncipe do Mundo Espiritual.</p>
+          <h3>{{ foto.profissao }}</h3>
+          <p> {{ foto.text_profissao }} </p>
         </div>
         <div>
           <h3> Habilidades e Poderes</h3>
-          <p> Yusuke desenvolve várias habilidades espirituais ao longo da série. Sua técnica mais icônica é o "Rei-Gan" (Spirit Gun), onde ele concentra sua energia espiritual em seu dedo e dispara como uma arma de fogo. Ele também aprende a usar outras técnicas poderosas, como o "Shotgun Espiritual" e a "Onda de Espírito."</p>
+          <p>{{ foto.text_habilidades }}</p>
         </div>
-        <p class="colunaExpansiva">Ao longo de suas missões, Yusuke forma fortes laços com outros personagens, incluindo Kazuma Kuwabara, seu rival que se torna um aliado próximo; Kurama, um demônio raposa reencarnado; e Hiei, um poderoso demônio de fogo. Juntos, eles enfrentam diversos inimigos poderosos em arcos como o Torneio das Trevas e a Saga dos Sensui.</p>
-        <p class="colunaExpansiva">Yusuke evolui significativamente ao longo da série, passando de um delinquente para um herói responsável, disposto a sacrificar-se pelos outros. Seu crescimento é impulsionado por suas experiências e relacionamentos, especialmente com Keiko Yukimura, sua amiga de infância e interesse amoroso, e Genkai, sua mestre rigorosa.</p>
+        <p class="colunaExpansiva">{{ foto.text_final_1 }}</p>
+        <p class="colunaExpansiva">{{ foto.text_final_2 }}</p>
 
 
       </main>
-      <aside class="anuncio">
+      <!-- <aside class="anuncio">
         <div class="anuncioItem">
           <a href="{% url 'herois' %}">
             <img src="{% static 'img/Herois.png' %}" alt="">
@@ -84,7 +78,7 @@
             <img src="{% static 'img/Viloes.png' %}" alt="">
           </a>
         </div>
-      </aside>
+      </aside> -->
 
     </div>
 
