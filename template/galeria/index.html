@@ -10,8 +10,9 @@
       </div>
       <nav>
         <ul>
-          <li><a href="#">Sobre</a></li>
-          <li><a href="{% url 'imagem' %}">Personagens</a></li>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="{% url 'herois' %}">Heróis</a></li>
+          <li><a href="#">Vilões</a></li>
           <li><a href="#">Contato</a></li>
         </ul>
       </nav>
@@ -22,7 +23,7 @@
 
       <nav class="sidenav">
         <ul>
-          <li><a href="{% url 'imagem' %}"><img src="{% static 'img/yusuke.jpg' %}" width="400" height="400" alt="Yusuke Urameshi"
+          <li><a href="#"><img src="{% static 'img/yusuke.jpg' %}" width="400" height="400" alt="Yusuke Urameshi"
                 class="iconesPersonagens"></a></li>
 
           <li><a href="#"><img src="{% static 'img/kuwabara.jpg' %}" width="400" height="400" alt="Kazuma Kuwabara"

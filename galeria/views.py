@@ -7,10 +7,10 @@ def index(request):
 
 
 def herois(request):
-
     fotos = Imagem.objects.all()
     return render(request, 'galeria/herois.html', {'fotos': fotos})
 
-def imagem(request):
-    return render(request, 'galeria/personagem.html')
+def imagem(request, foto_id):
+    foto = get_object_or_404(Imagem, pk=foto_id)
+    return render(request, 'galeria/personagem.html', {'foto': foto})
 
