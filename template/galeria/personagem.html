@@ -46,7 +46,7 @@
         <div class="titulo">
           <h1>{{foto.nome}}</h1>
         </div>
-        <img src="{% static 'img/herois/' %}{{ foto.foto }}" alt="Elenco Yu Yu Hakusho" class="">
+        <img src="{{ foto.foto.url }}" alt="Elenco Yu Yu Hakusho" class="">
 
         <p class="colunaExpansiva">{{ foto.introducao_1 }}</p>
 

@@ -7,7 +7,7 @@ def index(request):
 
 
 def herois(request):
-    fotos = Imagem.objects.all()
+    fotos = Imagem.objects.filter(publicada=True)
     return render(request, 'galeria/herois.html', {'fotos': fotos})
 
 def imagem(request, foto_id):
