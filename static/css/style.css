@@ -6,8 +6,6 @@
   font-family: 'Vollkorn', Georgia, serif;
 }
 
-
-
 img{
   display: block;
   max-width: 100%;
@@ -21,8 +19,6 @@ img{
   grid-template-columns: minmax(160px, 1fr) 3fr 300px;
   grid-template-areas:
   "sidenav conteudo anuncio"
-
-
   ;
   max-width: 1500px;
   margin: 0px auto;
@@ -47,6 +43,7 @@ img{
 display: flex;
 flex-wrap: wrap;
 }
+
 
 .header a{
   display: block;
@@ -269,7 +266,7 @@ footer a:hover{
   color: #ffffff;
 }
 
-/*Responsividade*/
+/* Responsividade*/
 
 @media(max-width: 1200px){
   .container{
@@ -333,7 +330,6 @@ footer a:hover{
     margin-bottom: 20px;
   }
 
- 
 
   .sidenav ul{
     display: flex;
@@ -363,7 +359,7 @@ footer a:hover{
 }
 
 @media(max-width: 600px){
- 
+
   .header nav ul{
     justify-content: center;
   }
@@ -378,4 +374,4 @@ footer a:hover{
     text-align: center;
   }
 }
-/*Fim da responsividade*/
+/*Fim da responsividade */

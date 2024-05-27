@@ -1,0 +1,61 @@
+{% load static %}
+
+<header class="header">
+      <div class="alinhamentoLogo">
+            <a href="{% url 'index' %}" id="logo">
+                  <img src="{% static 'img/y-y-hakusho-seeklogo.com.svg' %}" alt="Logo Yu Yu Hakusho"></a>
+            <p>Yu Yu Hakusho</p>
+      </div>
+
+      <style>
+            
+            #buscas {
+                  display: grid;
+                  margin-top: 20px;
+                  background: transparent;
+                  padding-right: 2px;
+            }
+
+            button {
+                  background: #47709F;
+                  border: none;
+                  padding: 5px;
+                  color: #f0f8ff;
+                  font-size: 18px;
+                  border-radius: 0 10px 10px 0;
+
+            }
+
+            button:active {
+                  background: #47799F;
+            }
+
+            #searchInput {
+                  border-radius: 10px 0 0 10px;
+                  border: none;
+                  background: #47709F;
+                  color: #f0f8ff;
+                  font-size: 18px;
+                  padding: 5px;
+            }
+
+            #searchInput:focus {
+                  outline: none;
+            }
+      </style>
+      <nav>
+            <ul>
+                  <li><a href="{% url 'index' %}">Inicio</a></li>
+                  <li><a href="{% url 'herois' %}">Heróis</a></li>
+                  <li><a href="#">Vilões</a></li>
+                  <li><a href="#">Contato</a></li>
+            </ul>
+            <div id="buscas">
+                  <form action="{% url 'buscar' %}">
+                        <input type="text" id="searchInput" placeholder="Digite sua busca..." name="buscar">
+                        <button type="submit">Buscar</button>
+                  </form>
+            </div>
+      </nav>
+
+</header>
