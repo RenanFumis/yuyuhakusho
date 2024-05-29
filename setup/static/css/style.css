@@ -79,21 +79,18 @@ flex-wrap: wrap;
   padding: 30px;
 }
 
-.sidenav li a{
+.sidenav li {
   display: block;
   min-width: 60px;
   max-width: 100px;
   margin: 0px auto 30px auto;
-  background: #ffffff;
+  background: #47799F;
   border-radius: 5px;
   padding: 10px;
   box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
   transition: .1s ease-out;
 }
 
-.sidenav li a:hover{
-  background: #47799F;
-}
 
 .sidenav .iconesPersonagens{
   max-height: 100px;
@@ -265,6 +262,40 @@ footer a{
 }
 footer a:hover{
   color: #ffffff;
+}
+
+#buscas {
+  display: grid;
+  margin-top: 20px;
+  background: transparent;
+  padding-right: 2px;
+}
+
+button {
+  background: #47709F;
+  border: none;
+  padding: 5px;
+  color: #f0f8ff;
+  font-size: 18px;
+  border-radius: 0 10px 10px 0;
+
+}
+
+button:active {
+  background: #47799F;
+}
+
+#searchInput {
+  border-radius: 10px 0 0 10px;
+  border: none;
+  background: #47709F;
+  color: #f0f8ff;
+  font-size: 18px;
+  padding: 5px;
+}
+
+#searchInput:focus {
+  outline: none;
 }
 
 /*Responsividade*/
