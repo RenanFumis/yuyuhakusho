@@ -362,7 +362,6 @@ button:active {
     margin-bottom: 20px;
   }
 
- 
 
   .sidenav ul{
     display: flex;
@@ -376,13 +375,14 @@ button:active {
     padding: 0px 30px;
   }
 
-  .sidenav li a{
+  .sidenav li{
     margin: 30px 30px 30px 0px;
   }
 
   .container{
     grid-template-columns: 1fr;
-    grid-template-areas: "sidenav"
+    grid-template-areas:
+    "sidenav"
     "conteudo"
     "anuncio";
   }
@@ -392,7 +392,10 @@ button:active {
 }
 
 @media(max-width: 600px){
- 
+.titulo h1{
+  font-size: 3rem;
+  }
+
   .header nav ul{
     justify-content: center;
   }

@@ -5,45 +5,17 @@
 
     <div class="container">
 
-      <!-- <nav class="sidenav">
-        <ul>
-          <li><a href="#"><img src="{% static 'img/yusuke.jpg' %}" width="400" height="400" alt="Yusuke Urameshi"
-                class="iconesPersonagens"></a></li>
-
-          <li><a href="#"><img src="{% static 'img/kuwabara.jpg' %}" width="400" height="400" alt="Kazuma Kuwabara"
-                class="iconesPersonagens"></a></li>
-
-          <li><a href="#"><img src="{% static 'img/kurama.jpg' %}" width="400" height="400" alt="Kurama Youko"
-                class="iconesPersonagens"></a></li>
-
-          <li><a href="#"><img src="{% static 'img/hiei.jpg' %}" width="400" height="400" alt="Hiei" class="iconesPersonagens"></a>
-          </li>
-
-          <li><a href="#"><img src="{% static 'img/botan.jpg' %}" width="400" height="400" alt="Botan" class="iconesPersonagens"></a>
-          </li>
-
-          <li><a href="#"><img src="{% static 'img/keiko.jpg' %}" width="400" height="400" alt="Keiko Yukimura"
-                class="iconesPersonagens"></a></li>
-        </ul>
-      </nav> -->
-      <style>
-          
-      
-      
-    </style>
       <main class="conteudo">
         <div class="titulo">
           <h1>Personagem</h1>
-          <span></span>
         </div>
       
         
-
         {% if fotos %}
         
         <p class="colunaExpansiva">O anime "Yu Yu Hakusho" tem vários personagens cativantes, como nossos heróis que embarcam em aventuras emocionantes e enfrentam inúmeros desafios sobrenaturais:</p>
+        
         {% for foto in fotos %}
-      
         <div>
           <a href="{% url 'imagem' foto.id %}">
             {% if foto.foto == "" or foto.foto == null %}
@@ -62,24 +34,6 @@
           </div>
           <img src="{% static 'img/herois/not_found.png' %}" alt="Personagem do Anime" class="colunaExpansiva">
           {% endif %}
-
-          <!--
-        
-
-      </main>
-      <!-- <aside class="anuncio">
-        <div class="anuncioItem">
-          <a href="{% url 'herois' %}">
-          <img src="{% static 'img/Herois.png' %}" alt="">
-        </a>
-        </div>
-
-        <div class="anuncioItem anuncio2">
-          <a href="viloes.html">
-          <img src="{% static 'img/Viloes.png' %}" alt="">
-        </a>
-        </div>
-      </aside> -->
 
     </div>
 
