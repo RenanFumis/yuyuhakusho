@@ -7,6 +7,7 @@ class Imagem(models.Model):
   introducao_2 = models.TextField(null=False, blank=False)
   profissao = models.CharField(max_length=200, null=False, blank=False)
   text_profissao = models.TextField(null=False, blank=False)
+  habilidades = models.CharField(max_length=200, null=False, blank=False)
   text_habilidades = models.TextField(null=False, blank=False)
   text_final_1 = models.TextField(null=False, blank=False)
   text_final_2 = models.TextField(null=False, blank=False)

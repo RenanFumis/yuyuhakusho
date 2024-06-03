@@ -5,7 +5,6 @@ from galeria.models import Imagem
 def index(request):
     return render(request, 'galeria/index.html')
 
-
 def herois(request):
     fotos = Imagem.objects.filter(publicada=True)
     return render(request, 'galeria/herois.html', {'fotos': fotos})
